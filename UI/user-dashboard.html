@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fast Food Fast | Order Amazing Food at great prices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+</head>
+<body>
+    <div class="backdrop"></div>
+    <div class="modal order-modal">
+        <h3 class="order-modal__title">Your Order</h3>
+        <div class="order-modal__details">
+            <div class="order-modal__content">
+                <img src="./img/spicy-fried-chicken.jpg" alt="" height="50px" width="50px">
+                <div class="order_description">
+                    <p class="order-name">Spicy Fried Chicken</p>
+                    <div class="order-edit__number">
+                        <!-- Minus Icon -->
+                        <i class="fas fa-minus"></i>
+                        <input type="number" value="1" min="1">
+                        <!-- Plus Icon -->
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <p class="order-price">&#8358 2000</p>
+            </div>
+            <div class="order-modal__content">
+                <img src="./img/spicy-fried-chicken.jpg" alt="" height="50px" width="50px">
+                <div class="order_description">
+                    <p class="order-name">Spicy Fried Chicken</p>
+                    <div class="order-edit__number">
+                        <!-- Minus Icon -->
+                        <i class="fas fa-minus"></i>
+                        <input type="number" id="order-quantity" min="1">
+                        <!-- Plus Icon -->
+                        <i class="fas fa-plus"></i>
+                    </div>
+                </div>
+                <p class="order-price">&#8358 2000</p>
+            </div>
+            <div class="order-total__container">
+                <div class="subtotal">
+                    <p>Subtotal</p>
+                    <p class="subtotal-price">&#8358 4000</p>
+                </div>
+                <div class="delivery">
+                    <p>Delivery</p>
+                    <p class="delivery-price">&#8358 500</p>
+                </div>
+                <div class="total">
+                    <p>Total</p>
+                    <p class="total-price">&#8358 4500</p>
+                </div>
+            </div>
+        </div>  
+        <button class="checkout-btn">Checkout</button>  
+    </div>
+    <!-- <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <button class="tab-link__btn" id="Pizza">Pizza</button>
+            </li>
+            <li class="mobile-nav__item">
+                <button class="tab-link__btn" id="Meals">Meals</button>
+            </li>
+            <li class="mobile-nav__item">
+                <button class="tab-link__btn" id="Pastries">Pastries</button>
+            </li>
+            <li class="mobile-nav__item">
+                <button class="tab-link__btn" id="Drinks">Drinks</button>
+            </li>
+            <li class="mobile-nav__item">
+                <button class="tab-link__btn" id="Specials">Specials</button>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="account.html" class="account"><p>My Account</p></a>
+            </li>
+        </ul>
+    </nav> -->
+    <section class="menu-header__tab">
+        <div class="hamburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <a href="../index.html"><h2 class="main-header__brand">FastFoodFast</h2></a>
+        <div class="tab-link">
+            <button class="tab-link__btn" id="Pizza">Pizza</button>
+            <button class="tab-link__btn" id="Meals">Meals</button>
+            <button class="tab-link__btn" id="Pastries">Pastries</button>
+            <button class="tab-link__btn" id="Drinks">Drinks</button>
+            <button class="tab-link__btn" id="Specials">Specials</button>
+        </div>
+        <a href="account.html" class="account"><p>My Account</p></a>
+    </section>
+    <section class="menu-content">
+        <div class="shopping-cart__container">Shop</div>
+        <div class="menu-content__container default-tab__food" id="pizza-tab">
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+        </div>
+        <div class="menu-content__container" id="meals-tab">
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+        </div>
+        <div class="menu-content__container" id="pastries-tab">
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+        </div>
+        <div class="menu-content__container" id="drinks-tab">
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+        </div>
+        <div class="menu-content__container" id="specials-tab">
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+            <div class="food-container" id="pizza1">
+                <img src="img/food.png" alt="pizza" class="tab-image">
+                <p class="foodname">Pizza 1</p>
+                <p class="food-price">&#8358 2000</p>
+                <button>Choose</button>
+            </div>
+        </div>
+    </section>
+
+    <script src="./assets/dashboard.js"></script>
+</body>
+</html>

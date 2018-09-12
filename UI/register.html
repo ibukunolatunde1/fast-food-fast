@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Fast Food Fast | Order Amazing Food at great prices</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/main.css" />
+</head>
+<body>
+    <div class="backdrop"></div>
+    <header class="main-header">
+        <div>
+            <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+            </div>
+            <a href="../index.html" class="main-header__brand"><h2>Fast Food Fast</h2></a>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__items">
+                <li class="main-nav__item">
+                    <a href="signin.html">Log In</a>
+                </li>
+                <li class="main-nav__item">
+                    <a href="register.html">Sign Up</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <nav class="mobile-nav">
+        <ul class="mobile-nav__items">
+            <li class="mobile-nav__item">
+                <a href="../index.html">Fast Food Fast</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="signin.html">Log In</a>
+            </li>
+            <li class="mobile-nav__item">
+                <a href="register.html">Sign Up</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="sign-up__section">
+        <div class="signup-form__container">
+            <!-- <div class="errors-container"></div> -->
+            <form class="signup-form">
+            <!-- Insert Logo here -->
+                <h3 class="registration-title">Sign Up For An Account</h3>
+                <p class="registration-subtitle">It's super fast and easy!</p>
+                <div class="name-details">
+                    <input type="text" placeholder="First Name" pattern="[A-Za-z]{3,}" id="firstName" required>
+                    <input type="text" placeholder="Last Name" pattern="[A-Za-z]{3,}" id="lastName" required>
+                </div>
+                <div class="contact-details">
+                    <input type="email" placeholder="Email" id="email" required>
+                    <input type="tel" id="tel" placeholder="Phone Number" required>
+                </div>
+                <input type="password" placeholder="Password" id="password" required>
+                <input type="password" placeholder="Confirm Password" id="repeatPassword" required>
+                <button class="sign-up__btn" type="button" id="sign-up__button">Sign Up</button>
+                </form>
+            <div class="sign-up__space">
+                <p>Already have an account? <a href="signin.html">Log In</a></p>
+            </div>
+        </div>
+    </section>
+    <script src="assets/signup.js"></script>
+</body>
+</html>

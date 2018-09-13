@@ -4,11 +4,9 @@ const UIController = (() => {
         backdrop: '.backdrop',
         mobileNav: '.mobile-nav',
         tabs: '.tab-content',
-        pizza: '#pizza',
         pastries: '#pastries',
         meals: '#meals',
         drinks: '#drinks',
-        pizzaBtn: '#pizza-btn',
         pastriesBtn: '#pastries-btn',
         mealsBtn: '#meals-btn',
         drinksBtn: '#drinks-btn',
@@ -43,7 +41,6 @@ const controller = ((UICtrl) => {
         document.querySelector(DOM.hamburger).addEventListener('click', UICtrl.toggleHamburger);
         document.querySelector(DOM.backdrop).addEventListener('click', UICtrl.closeMobileNav);
         document.querySelector(DOM.pastriesBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.pastries));
-        // document.querySelector(DOM.pizzaBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.pizza));
         document.querySelector(DOM.drinksBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.drinks));
         document.querySelector(DOM.mealsBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.meals));
         document.querySelectorAll(DOM.signUpBtn).forEach(btn => btn.addEventListener('click', UICtrl.redirect.bind(null, 'UI/register.html')));

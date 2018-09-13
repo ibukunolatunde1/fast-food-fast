@@ -21,6 +21,7 @@ ul {
 
 a {
     text-decoration: none;
+    color: white;
 }
 
 input[type=text], 
@@ -69,18 +70,6 @@ button{
     cursor: pointer;
 }
 
-/* .hamburger-active .line:nth-child(2){
-    opacity: 0;
-}
-
-.hamburger-active .line:nth-child(1){
-    transform: translateY(7px) rotate(45deg);
-}
-
-.hamburger-active .line:nth-child(3){
-    transform: translateY(-7px) rotate(-45deg)
-} */
-
 .open{
     display: block !important;
 }
@@ -121,7 +110,7 @@ button{
 
 .main-header__brand {
     font-weight: bold;
-    /* Should change the color */
+    color: white;
 }
 
 .mobile-nav {
@@ -305,6 +294,11 @@ button{
     
 }
 
+.signup-form__container a,
+.login-form__container a {
+    color: #0067f5;
+}
+
 .sign-up__btn,
 .sign-in__btn {
     width: 100%;
@@ -363,26 +357,38 @@ button{
     display: flex;
     flex: 1;
     justify-content: space-evenly;
+    margin: 0 3rem;
+    border: 1px solid;
+    border-bottom: none;
+    border-top: none;
 }
 
 .tab-link__btn{
-    line-height: 0;
-    padding: 0;
     background: none;
     box-shadow: none;
     text-transform: none;
+    color: antiquewhite;
+}
+
+.tab-link__btn:hover {
+    background: #37966F;
 }
 
 .shopping-cart__container{
     padding: 1rem 2rem;
     cursor: pointer;
     border-radius: 32px;
+    color: white;
     background-color: #FD5523;
     position: fixed;
     bottom: 5%;
     right: 15%;
     z-index: 20;
     box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.account p {
+    color: antiquewhite;
 }
 
 .menu-content{
@@ -460,14 +466,11 @@ footer * {
     height: 30px;
 }
 
-table, th, td {
-    margin: 1rem auto;
-    font-size: 14px;
-}
-
 table {
     border-collapse: collapse;
-    width: 80%;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
 }
 
 thead {
@@ -480,7 +483,7 @@ th {
 }
 
 td {
-    padding: 0.3rem;
+    /* padding: 0.3rem; */
 }
 
 th, td {
@@ -494,6 +497,12 @@ tr:hover {
 
 .offers__title {
     margin-top: 1rem;
+}
+
+.completed-offers__table,
+.active-offers__table {
+    width: 80%;
+    margin: 0 auto;
 }
 
 .completed-offers__btn {
@@ -647,10 +656,16 @@ tr:hover {
         width: 80%;
         left: 10%;
     }
+    .food-container {
+        padding: 0;
+    }
 }
 
 /* Medium Display */
 @media only screen and (min-width: 768px) and (max-width: 1024px){
+    .hamburger .line{
+        display: block;
+    }
     .main-display {
         min-height: 70vh;
     }
@@ -665,5 +680,12 @@ tr:hover {
     }
     .features-item p {
         padding: 0 1rem;
+    }
+    .tab-link,
+    .account {
+        display: none;
+    }
+    .menu-header__tab{
+        justify-content: flex-start;
     }
 }

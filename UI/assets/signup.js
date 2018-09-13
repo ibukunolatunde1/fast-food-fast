@@ -4,9 +4,9 @@ const registerController = (() => {
         validateInput: (input) => {
             const errors = {};
             const errorMessage = [
-                'Name is required to be only letters and greater than 2 letters',
+                'Name is required to be 2 or more letters',
                 'Enter a valid Email Address',
-                'Password is required to be only letters and greater than 2 letters',
+                'Password is required to be 8 or more letters',
                 'Tel No is required'
             ];
             let status;
@@ -55,10 +55,6 @@ const UIController = (() => {
     }
 
     const clearInput = () => {
-        document.querySelector(DOMstrings.firstName).value = '';
-        document.querySelector(DOMstrings.lastName).value = '';
-        document.querySelector(DOMstrings.email).value = '';
-        document.querySelector(DOMstrings.tel).value = '';
         document.querySelector(DOMstrings.password).value = '';
         document.querySelector(DOMstrings.repeatPassword).value = '';
     }
@@ -108,7 +104,7 @@ const UIController = (() => {
             setTimeout(() => clearAlert(), 3000);
 
             // Then Clear fields
-            // clearInput();
+            clearInput();
         },
         redirect: (url) => {
             window.location = url;

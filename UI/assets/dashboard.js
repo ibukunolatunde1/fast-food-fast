@@ -15,9 +15,15 @@ const UIController = (() => {
         specialsBtn: '#Specials',
         mealsBtn: '#Meals',
         drinksBtn: '#Drinks',
+        pizzaMobile: '#Pizza-nav',
+        pastriesMobile: '#Pastries-nav',
+        specialsMobile: '#Specials-nav',
+        mealsMobile: '#Meals-nav',
+        drinksMobile: '#Drinks-nav',
         signUpBtn: '.sign-up__cta',
         shopOrdersBtn: '.shopping-cart__container',
-        modal: '.modal'
+        modal: '.modal',
+        chooseFoodBtn: '.food-container button'
     }
 
     return {
@@ -46,14 +52,26 @@ const controller = ((UICtrl) => {
         document.querySelector(DOM.backdrop).classList.add('open');
         document.querySelector(DOM.modal).classList.add('open');
     }
+    const addToShoppingList = () => {
+        // Get the item
+
+        // Add item to array
+
+        // Notify the user that item has been added - maybe bounce the shopping cart div
+        // document.querySelector(DOM.shopOrdersBtn).style.backgroundColor = 'blue'; -- Something like this
+    }
     const setupEventListeners = () => {
         document.querySelector(DOM.hamburger).addEventListener('click', UICtrl.toggleHamburger);
         document.querySelector(DOM.backdrop).addEventListener('click', UICtrl.closeMobileNav);
         document.querySelector(DOM.pastriesBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.pastries));
-        document.querySelector(DOM.pizzaBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.pizza));
         document.querySelector(DOM.drinksBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.drinks));
         document.querySelector(DOM.mealsBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.meals));
         document.querySelector(DOM.specialsBtn).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.specials));
+        document.querySelector(DOM.pastriesMobile).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.pastries));
+        document.querySelector(DOM.drinksMobile).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.drinks));
+        document.querySelector(DOM.mealsMobile).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.meals));
+        document.querySelector(DOM.specialsMobile).addEventListener('click', UICtrl.openTabContent.bind(null, DOM.specials));
+        document.querySelectorAll(DOM.chooseFoodBtn).forEach(chooseBtn => chooseBtn.addEventListener('click', addToShoppingList));
         document.querySelector(DOM.shopOrdersBtn).addEventListener('click', shopOrders);
     }
     return {
